@@ -60,15 +60,37 @@
 // Postulat: one function = one job (uncle Bob) --> Begründer: Cecil Martin aka Uncle Bob (Nice to Know)
 // SRP single responsibility principle
 
-ausgabeNamenParams2("Jamshid", "Rahmanzani");
+// ausgabeNamenParams2("Jamshid", "Rahmanzani");
 
-function ausgabeNamenParams2(firstName, familyName) {
+// function ausgabeNamenParams2(firstName, familyName) {
 
-     // 1. Funktionalität: string composing
+//      // 1. Funktionalität: string composing
+//     const GAP = " ";
+//     let outputStr = "Hallo" + GAP + firstName + GAP + familyName + "!";
+    
+//      // 2. Funktionalität: string output
+//     console.log(outputStr);
+// }
+
+/***** Funktionen 03b *****/
+// Trennen der Funktionalitäten in Funktionen | return
+
+getString("Maxine","Mützerich");
+output(getString("Maxine","Mützerich"));
+
+function getString(firstName,familyName) {
     const GAP = " ";
     let outputStr = "Hallo" + GAP + firstName + GAP + familyName + "!";
-    
-     // 2. Funktionalität: string output
-    console.log(outputStr);
+    return outputStr; // return sendet Daten an den call zurück
+    console.log(outputStr); // return bricht die Funktion ab!
 }
 
+/** INPUT --> Parameter | return --> OUTPUT **/
+
+// 2. Funktionalität: string output
+// output("Hi");
+// output(2);
+// output(true);
+function output(outputData) {    // Das hier nennt man Wrapper! Wird uns später immer wieder begegnen und den Arsch retten!
+    console.log(outputData);
+}
