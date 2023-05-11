@@ -75,8 +75,9 @@
 /***** Funktionen 03b *****/
 // Trennen der Funktionalitäten in Funktionen | return
 
-getString("Maxine","Mützerich");
-output(getString("Maxine","Mützerich"));
+// getString("Maxine","Mützerich");
+// output(getString("Maxine","Mützerich"));
+output(getString(prompt("Vorname?"),prompt("Nachname?")));
 
 function getString(firstName,familyName) {
     const GAP = " ";
